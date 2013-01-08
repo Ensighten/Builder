@@ -20,6 +20,9 @@ function Builder(tmpl, data) {
 
   // Pass the template through the dom engine
   var $content = domify(content);
+
+  // Return the $content
+  return $content;
 }
 
 /**
@@ -55,6 +58,28 @@ function domify(content) {
 }
 Builder.domify = domify;
 
-
+/**
+ * Settings helper for Builder
+ * @param {String|Object} name If object, interpret as key-value pairs of settings. If string, save val under settings key.
+ * @param {Mixed} [val] Value to save under name
+ */
+function set(name, val) {
+  // If the name is an object
+  var key;
+  if (typeof name === 'object') {
+    // Iterate over its properties
+    for (key in name) {
+      if (name.hasOwnProperty(key)) {
+        // Set each one
+        set(key, name[key]);
+      }
+    }
+  } else {
+  // Otherwise, save to settings
+    settings[name] = val;
+  }
+}
+Builder.set = set;
+Builder.settings = settings;
 
 // TODO: Add a flavor of Builder which accepts keys over template

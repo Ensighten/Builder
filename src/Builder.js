@@ -11,21 +11,49 @@ var settings = {
     afterFns = [];
 
 /**
- * Build chain for client side views. tmpl -> html -> post render fns -> return
+ * Build chain for client side views. before -> template -> domify -> after -> return
  * @param {String} tmpl Template to process through template engine
  * @param {Object} [data] Data to pass through to template engine
- * @returns {Mixed}
+ * @returns {Mixed} Output from before -> template -> domify -> after -> return
  */
 function Builder(tmpl, data) {
+  // Generate a this context for data
+  var that = {'data': data};
+
+  // Run the beforeFns on tmpl
+  tmpl = pre.call(that, tmpl);
+
   // Convert the template into content
-  var content = template(tmpl, data);
+  var content = template.call(that, tmpl, data);
 
   // Pass the template through the dom engine
-  var $content = domify(content);
+  var $content = domify.call(that, content);
+
+  // Run the afterFns on $content
+  $content = post.call(that, $content);
 
   // Return the $content
   return $content;
 }
+
+/**
+ * Modify tmpl via beforeFns
+ * @param {String} tmpl Template string to modify
+ * @returns {String} Modified tmpl
+ */
+function pre(tmpl) {
+  // Iterate over the beforeFns
+  var i = 0,
+      len = beforeFns.length;
+  for (; i < len; i++) {
+    tmpl = beforeFns[i].call(this, tmpl) || tmpl;
+  }
+
+  // Return tmpl
+  return tmpl;
+}
+Builder.pre = pre;
+Builder.beforeFns = beforeFns;
 
 /**
  * Parse template through its engine
@@ -37,7 +65,7 @@ function template(tmpl, data) {
   var engine = settings['template engine'];
 
   // Process the template through the template engine
-  var content = engine(tmpl, data);
+  var content = engine.call(this, tmpl, data);
 
   // Return the content
   return content;
@@ -53,12 +81,31 @@ function domify(content) {
   var engine = settings['dom engine'];
 
   // Process the content through the dom engine
-  var $content = engine(content);
+  var $content = engine.call(this, content);
 
   // Return the $content
   return $content;
 }
 Builder.domify = domify;
+
+/**
+ * Modify $content via afterFns
+ * @param {String} $content Content to modify
+ * @returns {String} Modified $content
+ */
+function post($content) {
+  // Iterate over the afterFns
+  var i = 0,
+      len = afterFns.length;
+  for (; i < len; i++) {
+    $content = afterFns[i].call(this, $content) || $content;
+  }
+
+  // Return tmpl
+  return $content;
+}
+Builder.post = post;
+Builder.afterFns = afterFns;
 
 /**
  * Settings helper for Builder
@@ -84,9 +131,7 @@ function set(name, val) {
 Builder.set = set;
 Builder.settings = settings;
 
-// TODO: Implement before and after
-// TODO: For before, template, render, and after -- make this.data an accessible parameter.
-// TODO: Effectively allowing for easy chaining of before/after edits with side-access to data when wanted.
+// TODO: Inside of README, leave notes about this.data
 
 // TODO: Add a flavor of Builder which accepts keys over template
 // TODO: This could be a built-in: attempt to retrieve from template store and fallback to string? -- nah, people would want errors upon non-existance

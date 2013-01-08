@@ -1,6 +1,8 @@
 # Builder
 
-Build chain for client-side MVC views. Render, convert to DOM elements, and bind jQuery plugins in one fell swoop.
+Build chain for client-side MVC views.
+
+Render, convert to DOM elements, and bind jQuery plugins in one fell swoop.
 
 ## Getting Started
 Download the [production version][min] ([vanilla][min] or [requirejs][min_require]) or the [development version][max] ([vanilla][max] or [requirejs][max_require]).

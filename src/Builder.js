@@ -131,7 +131,22 @@ function set(name, val) {
 Builder.set = set;
 Builder.settings = settings;
 
-// TODO: Inside of README, leave notes about this.data
+/**
+ * Helper method for saving new before methods
+ * @param {Function} fn Before method to add
+ */
+function before(fn) {
+  beforeFns.push(fn);
+}
+Builder.before = before;
 
-// TODO: Add a flavor of Builder which accepts keys over template
-// TODO: This could be a built-in: attempt to retrieve from template store and fallback to string? -- nah, people would want errors upon non-existance
+/**
+ * Helper method for saving new after methods
+ * @param {Function} fn After method to add
+ */
+function after(fn) {
+  afterFns.push(fn);
+}
+Builder.after = after;
+
+// TODO: Inside of README, leave notes about this.data

@@ -85,6 +85,8 @@ Builder.set = set;
 Builder.settings = settings;
 
 // TODO: Implement before and after
+// TODO: For before, template, render, and after -- make this.data an accessible parameter.
+// TODO: Effectively allowing for easy chaining of before/after edits with side-access to data when wanted.
 
 // TODO: Add a flavor of Builder which accepts keys over template
 // TODO: This could be a built-in: attempt to retrieve from template store and fallback to string? -- nah, people would want errors upon non-existance

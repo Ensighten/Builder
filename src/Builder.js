@@ -6,7 +6,9 @@ var settings = {
       'dom engine': function (content) {
         return content;
       }
-    };
+    },
+    beforeFns = [],
+    afterFns = [];
 
 /**
  * Build chain for client side views. tmpl -> html -> post render fns -> return
@@ -82,4 +84,7 @@ function set(name, val) {
 Builder.set = set;
 Builder.settings = settings;
 
+// TODO: Implement before and after
+
 // TODO: Add a flavor of Builder which accepts keys over template
+// TODO: This could be a built-in: attempt to retrieve from template store and fallback to string? -- nah, people would want errors upon non-existance

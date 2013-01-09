@@ -1,9 +1,16 @@
 /*global module:true */
 module.exports = function(grunt) {
-  var read = grunt.file.read;
+  var read = grunt.file.read,
+      distro = require('./utils/distro');
 
   // Project configuration.
-  grunt.initConfig({
+  var vars = {
+    'Builder': read('src/Builder.js'),
+    'Builder-jquery': read('src/Builder.jquery.js'),
+    'Builder-keys': read('src/Builder.keys.js')
+  },
+  initConfig = {
+    // Package data
     pkg: '<json:package.json>',
     meta: {
       banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
@@ -12,52 +19,40 @@ module.exports = function(grunt) {
         '* Copyright (c) <%= grunt.template.today("yyyy") %> Ensighten;' +
         ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */'
     },
-    template: {
+
+    // Distribution setup
+    distro: {
       vanilla: {
         src: 'src/templates/vanilla.mustache',
-        dest: 'stage/Builder.js',
-        variables: {
-          'Builder': read('src/Builder.js')
-        }
+        dest: 'dist/Builder.js',
+        variables: vars
       },
       require: {
         src: 'src/templates/require.mustache',
-        dest: 'stage/Builder.require.js',
-        variables: {
-          'Builder': read('src/Builder.js')
-        }
+        dest: 'dist/Builder.require.js',
+        variables: vars
       }
     },
-    concat: {
-      distVanilla: {
-        src: ['<banner:meta.banner>', '<file_strip_banner:stage/<%= pkg.name %>.js>'],
-        dest: 'dist/<%= pkg.name %>.js'
-      },
-      distRequire: {
-        src: ['<banner:meta.banner>', '<file_strip_banner:stage/<%= pkg.name %>.require.js>'],
-        dest: 'dist/<%= pkg.name %>.require.js'
-      }
-    },
-    min: {
-      distVanilla: {
-        src: ['<banner:meta.banner>', '<config:concat.distVanilla.dest>'],
-        dest: 'dist/<%= pkg.name %>.min.js'
-      },
-      distRequire: {
-        src: ['<banner:meta.banner>', '<config:concat.distRequire.dest>'],
-        dest: 'dist/<%= pkg.name %>.require.min.js'
-      }
-    },
+    // Cannot do inline, see below =(
+    // template: distro.template(initConfig.distro),
+    // concat: distro.concat(initConfig.distro),
+    // min: distro.min(initConfig.distro),
+
+    // Testing setup
     qunit: {
       files: ['test/**/*.html']
     },
     lint: {
       files: ['grunt.js', 'src/**/*.js', 'test/**/*.js']
     },
+
+    // Watch utility
     watch: {
       files: ['<config:lint.files>', '<config:qunit.files>'],
       tasks: 'default'
     },
+
+    // Testing config
     jshint: {
       options: {
         curly: true,
@@ -81,7 +76,11 @@ module.exports = function(grunt) {
       }
     },
     uglify: {}
-  });
+  };
+  initConfig.template = distro.template(initConfig.distro);
+  initConfig.concat = distro.concat(initConfig.distro);
+  initConfig.min = distro.min(initConfig.distro);
+  grunt.initConfig(initConfig);
 
   // Load in grunt-templater
   grunt.loadNpmTasks('grunt-templater');
@@ -92,4 +91,6 @@ module.exports = function(grunt) {
   // Default task.
   grunt.registerTask('default', 'lint template concat min test');
 
+  // Register distro as a placeholder task (not really though)
+  grunt.registerTask('distro', '');
 };

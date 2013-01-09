@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     'Builder': read('src/Builder.js'),
     'BuilderJQuery': read('src/Builder.jquery.js'),
     'BuilderKeys': read('src/Builder.keys.js'),
-    'defaultSettings': read('src/Builder.settings.jquery.js'),
+    'defaultSettings': read('src/Builder.settings.default.js'),
     'jQuerySettings': read('src/Builder.settings.jquery.js')
   },
   initConfig = {

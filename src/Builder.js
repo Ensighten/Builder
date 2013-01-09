@@ -140,5 +140,3 @@ function after(fn) {
   afterFns.push(fn);
 }
 Builder.after = after;
-
-// TODO: Inside of README, leave notes about this.data

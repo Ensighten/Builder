@@ -33,10 +33,29 @@
     ok(Builder, 'Builder defined on window exists');
   });
 
+
   module('Builder#template');
 
-  test('processed by an augmented vanilla Builder returns augments content', function () {
+  test('processed by a template-augmented vanilla Builder augments content', function () {
     expect(1);
+    Builder.set('template engine', function (content) {
+      return content.replace('hi', 'hello');
+    });
+
+    var input = '<span>hi</span>',
+        output = Builder(input);
+
+    strictEqual(output, '<span>hello</span>');
+  });
+
+
+  module('Builder#anotherTemplate');
+
+  test('processed by an domify-augmented vanilla Builder augments content', function () {
+    expect(1);
+    Builder.set('template engine', function (content) {
+      return content;
+    });
     Builder.set('dom engine', function (content) {
       return '<div>' + content + '</div>';
     });

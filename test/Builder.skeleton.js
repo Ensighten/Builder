@@ -10,7 +10,6 @@
       "returns augmented content": true
     }
   },
-  // TODO
   "Another template": {
     "processed by a domify-augmented vanilla Builder": {
       "returns augmented content": true

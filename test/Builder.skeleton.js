@@ -38,14 +38,12 @@
     }
   }
 }, {
-// Builder.require.jquery.keys
-  // TODO
+// Builder.require.jquery
   "A template with a jQuery plugin (string flavor)": {
     "rendered by a jQuery pluginified Builder": {
       "instantiates the jQuery plugin": true
     }
   },
-  // TODO
   "A template with a jQuery plugin (object flavor)": {
     "rendered by a jQuery pluginified Builder": {
       "instantiates the jQuery plugin": true

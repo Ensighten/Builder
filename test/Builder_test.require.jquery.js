@@ -42,7 +42,7 @@ test('A template with a jQuery plugin (string flavor) rendered by a jQuery plugi
     Builder.addPlugin('test');
 
     // Render our view
-    var $content = Builder('<div class="testRan">a</div><div><span class="testRan">b</span></div>');
+    var $content = Builder('<div class="test">a</div><div><span class="test">b</span></div>');
 
     // Verify the first node was instantiated
     ok($content.eq(0).data('testRan'), 'instantiated first testRan');

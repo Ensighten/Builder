@@ -25,8 +25,6 @@ Download any of the versions below. A [definition of each preset](#presets) is p
 [the_works_max]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.require.jquery.keys.js
 [the_works_min]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.require.jquery.keys.min.js
 
-// TODO: Modifiers
-
 In your web page:
 
 ```html
@@ -118,7 +116,7 @@ Lastly, we can update our `template engine` (e.g. [jade][jade], [ejs][ejs], [mus
 
 The `template engine` takes views and interprets the template along with data to output content.
 
-`template engine`s recieve `(<template string>, <data object>)` as parameters so they must be synchronous.
+`template engine` recieves `(<template string>, <data object>)` as parameters and is expected to return a `string` synchronously.
 
 The `dom engine` takes strings and converts them into HTML elements, jQuery collections, or similar.
 

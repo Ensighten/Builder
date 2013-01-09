@@ -184,7 +184,7 @@ function addPlugin(params) {
 
     // Iterate over the items and initialize the plugin
     $items.each(function () {
-      $(item)[plugin]();
+      $(this)[plugin]();
     });
   };
 

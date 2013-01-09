@@ -29,7 +29,7 @@ test('A template with a jQuery plugin (string flavor) rendered by a jQuery plugi
   stop();
 
   // Load jQuery.
-  require(['Builder'], function (Builder) {
+  require(['jquery', 'Builder'], function ($, Builder) {
     // Continue testing.
     start();
 
@@ -58,7 +58,7 @@ test('A template with a jQuery plugin (object flavor) rendered by a jQuery plugi
   stop();
 
   // Load jQuery.
-  require(['Builder'], function (Builder) {
+  require(['jquery', 'Builder'], function ($, Builder) {
     // Continue testing.
     start();
 

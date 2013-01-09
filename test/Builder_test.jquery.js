@@ -24,11 +24,24 @@
   module('Builder#jquery');
 
   test('A template rendered by a jQuery Builder returns a valid jQuery collection and the expected elements', function() {
-    expect(2);
-    var template = '<div><span>Hello</span><button>World</button></div><div>!</div>',
+    expect(7);
+
+    // Render the content via Builder
+    var template = '<div><span>Hello</span> <article>World</article></div><section>!</section>',
         $content = Builder(template);
+
+    // Compare properties of the $content
     strictEqual($content.length, 2, 'has a length of 2');
     ok($content instanceof $, 'is a jQuery object');
+    strictEqual($content.text(), 'Hello World!', 'has proper text');
+
+    // Hard comparison for first elemnt
+    ok($content.eq(0).is('div'), 'has div for first element');
+    strictEqual($content.eq(0).html(), '<span>Hello</span> <article>World</article>', 'has proper first element HTML');
+
+    // Hard comparison for second elemnt
+    ok($content.eq(1).is('section'), 'has section for second element');
+    strictEqual($content.eq(1).html(), '!', 'has proper second element HTML');
   });
 
 }(jQuery));

@@ -1,5 +1,6 @@
 // Define jQuery as our dom engine
 // TODO: Inspect if uglify collapses this. If not, contemplate templating...
+// TODO: It does not, figure out how to easily do this
 settings['dom engine'] = $;
 
 /**

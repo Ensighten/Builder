@@ -1,13 +1,14 @@
 /*global module:true */
 module.exports = function(grunt) {
   var read = grunt.file.read,
-      distro = require('./utils/distro');
+      distro = require('./utils/distro'),
+      _ = require('underscore');
 
   // Project configuration.
   var vars = {
     'Builder': read('src/Builder.js'),
-    'Builder-jquery': read('src/Builder.jquery.js'),
-    'Builder-keys': read('src/Builder.keys.js')
+    'BuilderJQuery': read('src/Builder.jquery.js'),
+    'BuilderKeys': read('src/Builder.keys.js')
   },
   initConfig = {
     // Package data
@@ -31,6 +32,14 @@ module.exports = function(grunt) {
         src: 'src/templates/require.mustache',
         dest: 'dist/Builder.require.js',
         variables: vars
+      },
+      'require-jquery-keys': {
+        src: 'src/templates/require.mustache',
+        dest: 'dist/Builder.require.jquery.keys.js',
+        variables: _.defaults({
+          useJQuery: true,
+          useKeys: true
+        }, vars)
       }
     },
     // Cannot do inline, see below =(

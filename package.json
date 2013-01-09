@@ -25,13 +25,13 @@
   "scripts": {
     "test": "grunt qunit"
   },
-  "dependencies": {
-    "underscore": "~1.4.3"
-  },
+  "dependencies": {},
   "devDependencies": {
     "grunt": "~0.3.17",
     "grunt-templater": "0.0.3-1",
-    "mustache": "~0.7.0"
+    "mustache": "~0.7.0",
+    "underscore": "~1.4.3",
+    "deep-extend": "~0.2.5"
   },
   "keywords": [
     "render",

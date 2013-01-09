@@ -11,11 +11,18 @@
     }
   }
 }, {
-// Builder.jquery.keys
+// Builder.jquery
   "A template": {
     "rendered by a jQuery Builder": {
       "returns a valid jQuery collection": true,
       "returns the expected elements": true
+    }
+  }
+}, {
+// Builder.keys
+  "A template": {
+    "rendered by a keys Builder": {
+      "returns the view": true
     }
   }
 }, {
@@ -26,11 +33,15 @@
     }
   }
 }, {
-// Builder.require.jquery.keys (same as Builder.jquery.keys)
-  "A template": {
-    "rendered by a jQuery Builder": {
-      "returns a valid jQuery collection": true,
-      "returns the expected elements": true
+// Builder.require.jquery.keys
+  "A template with a jQuery plugin (string flavor)": {
+    "rendered by a jQuery pluginified Builder": {
+      "instantiates the jQuery plugin": true
+    }
+  },
+  "A template with a jQuery plugin (object flavor)": {
+    "rendered by a jQuery pluginified Builder": {
+      "instantiates the jQuery plugin": true
     }
   }
 }]

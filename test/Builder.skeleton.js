@@ -6,7 +6,13 @@
     }
   },
   "A template": {
-    "processed by an augmented vanilla Builder": {
+    "processed by a template-augmented vanilla Builder": {
+      "returns augmented content": true
+    }
+  },
+  // TODO
+  "Another template": {
+    "processed by a domify-augmented vanilla Builder": {
       "returns augmented content": true
     }
   }
@@ -20,6 +26,7 @@
   }
 }, {
 // Builder.keys
+  // TODO
   "A template": {
     "rendered by a keys Builder": {
       "returns the view": true
@@ -34,11 +41,13 @@
   }
 }, {
 // Builder.require.jquery.keys
+  // TODO
   "A template with a jQuery plugin (string flavor)": {
     "rendered by a jQuery pluginified Builder": {
       "instantiates the jQuery plugin": true
     }
   },
+  // TODO
   "A template with a jQuery plugin (object flavor)": {
     "rendered by a jQuery pluginified Builder": {
       "instantiates the jQuery plugin": true

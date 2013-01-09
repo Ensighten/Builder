@@ -30,6 +30,20 @@ module.exports = function(grunt) {
         dest: 'dist/Builder.js',
         variables: vars
       },
+      'vanilla-jquery': {
+        src: 'src/templates/vanilla.mustache',
+        dest: 'dist/Builder.jquery.js',
+        variables: _.defaults({
+          useJQuery: true
+        }, vars)
+      },
+      'vanilla-keys': {
+        src: 'src/templates/vanilla.mustache',
+        dest: 'dist/Builder.keys.js',
+        variables: _.defaults({
+          useKeys: true
+        }, vars)
+      },
       require: {
         src: 'src/templates/require.mustache',
         dest: 'dist/Builder.require.js',

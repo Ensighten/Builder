@@ -21,30 +21,14 @@
       raises(block, [expected], [message])
   */
 
-  module('Builder#window', {
-    // This will run before each test in this module.
-    setup: function() {
-      this.elems = $('#qunit-fixture').children();
-    }
-  });
+  module('Builder#jquery');
 
-  test('exists', function() {
-    expect(1);
-    ok(Builder, 'Builder defined on window exists');
-  });
-
-  module('Builder#template');
-
-  test('processed by an augmented vanilla Builder returns augments content', function () {
-    expect(1);
-    Builder.set('dom engine', function (content) {
-      return '<div>' + content + '</div>';
-    });
-
-    var input = '<span>hello</span>',
-        output = Builder(input);
-
-    strictEqual(output, '<div><span>hello</span></div>');
+  test('A template rendered by a jQuery Builder returns a valid jQuery collection and the expected elements', function() {
+    expect(2);
+    var template = '<div><span>Hello</span><button>World</button></div><div>!</div>',
+        $content = Builder(template);
+    strictEqual($content.length, 2, 'has a length of 2');
+    ok($content instanceof $, 'is a jQuery object');
   });
 
 }(jQuery));

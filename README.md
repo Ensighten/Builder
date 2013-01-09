@@ -7,10 +7,10 @@ Render, convert to DOM elements, and bind jQuery plugins in one fell swoop.
 ## Getting Started
 Download any of the versions below. A [definition of each preset](#presets) is presented later in the documentation.
 
-|             |  Vanilla  |  jQuery  |    keys    |    require    | require + jQuery | require + jQuery + keys |
-|-------------|-----------|----------|------------|---------------|------------------|-------------------------|
-| Development | [van_max] | [jq_max] | [keys_max] | [require_max] | [require_jq_max] | [the_works_max]         |
-| Production  | [van_min] | [jq_min] | [keys_min] | [require_min] | [require_jq_min] | [the_works_min]         |
+|             |        Vanilla        |  jQuery  |    keys    |    require    | require + jQuery | require + jQuery + keys |
+|-------------|-----------------------|----------|------------|---------------|------------------|-------------------------|
+| Development | [Builder.js][van_max] | [jQuery][jq_max] | [keys][keys_max] | [require][require_max] | [require + jQuery][require_jq_max] | [require + jQuery + keys][the_works_max]         |
+| Production  | [Builder.js][van_min] | [jQuery][jq_min] | [keys][keys_min] | [require][require_min] | [require + jQuery][require_jq_min] | [require + jQuery + keys][the_works_min]         |
 
 [van_max]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.js
 [van_min]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.min.js

@@ -1,4 +1,5 @@
 define(function () {
+
 // jQuery flavored settings for Builder
 var settings = {
       'template engine': function (tmpl) {
@@ -8,7 +9,6 @@ var settings = {
         return $(content);
       }
     };
-
 
 // Create storage for before and after functions
 var beforeFns = [],
@@ -158,4 +158,5 @@ Builder.after = after;
 
 
 return Builder;
+
 });

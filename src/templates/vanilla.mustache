@@ -1,15 +1,12 @@
 {{^useJQuery}}
-define(function () {
-{{/useJQuery}}
-{{#useJQuery}}
+(function () {
+{{/useJQuery}}{{#useJQuery}}
 (function ($) {
 {{/useJQuery}}
 
 {{^useJQuery}}
 {{{defaultSettings}}}
-{{/useJQuery}}
-
-{{#useJQuery}}
+{{/useJQuery}}{{#useJQuery}}
 {{{jQuerySettings}}}
 {{/useJQuery}}
 
@@ -26,8 +23,7 @@ define(function () {
 return Builder;
 
 {{^useJQuery}}
-)());
-{{/useJQuery}}
-{{#useJQuery}}
-)(jQuery));
+}());
+{{/useJQuery}}{{#useJQuery}}
+}(jQuery));
 {{/useJQuery}}

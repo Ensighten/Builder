@@ -2,7 +2,7 @@
 * https://github.com/Ensighten/Builder
 * Copyright (c) 2013 Ensighten; Licensed MIT */
 
-define(function () {
+define(['jquery'], function ($) {
 
 // jQuery flavored settings for Builder
 var settings = {
@@ -228,4 +228,5 @@ before(function (name) {
 });
 
 return Builder;
+
 });

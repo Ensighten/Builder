@@ -1,13 +1,12 @@
 {{^useJQuery}}
 define(function () {
-{{#useJQuery}}
+{{/useJQuery}}{{#useJQuery}}
 define(['jquery'], function ($) {
 {{/useJQuery}}
+
 {{^useJQuery}}
 {{{defaultSettings}}}
-{{/useJQuery}}
-
-{{#useJQuery}}
+{{/useJQuery}}{{#useJQuery}}
 {{{jQuerySettings}}}
 {{/useJQuery}}
 
@@ -22,4 +21,5 @@ define(['jquery'], function ($) {
 {{/useKeys}}
 
 return Builder;
+
 });

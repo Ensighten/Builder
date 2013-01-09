@@ -1,4 +1,4 @@
-define(function () {
+define(['jquery'], function ($) {
 
 // jQuery flavored settings for Builder
 var settings = {
@@ -224,4 +224,5 @@ before(function (name) {
 });
 
 return Builder;
+
 });

@@ -3,6 +3,17 @@
 * Copyright (c) 2013 Ensighten; Licensed MIT */
 
 (function () {
+
+// jQuery flavored settings for Builder
+var settings = {
+      'template engine': function (tmpl) {
+        return tmpl;
+      },
+      'dom engine': function (content) {
+        return $(content);
+      }
+    };
+
 // Create storage for before and after functions
 var beforeFns = [],
     afterFns = [];
@@ -147,5 +158,9 @@ function after(fn) {
 Builder.after = after;
 
 // TODO: Inside of README, leave notes about this.data
+
+
+
 return Builder;
+
 }());

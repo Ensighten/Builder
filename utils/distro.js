@@ -36,7 +36,6 @@ var _ = require('underscore');
 
 // Helper for grabbing the stageName of a config
 function stageName(config) {
-console.log(config.dest.replace('dist', 'stage'));
   return config.dest.replace('dist', 'stage');
 }
 

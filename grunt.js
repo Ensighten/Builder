@@ -80,19 +80,33 @@ module.exports = function(grunt) {
       files: ['test/**/*.html']
     },
     lint: {
-      main: ['grunt.js', 'src/Builder.js', 'test/**/*.js'],
-      plugins: 'src/**/*.js'
+      files: ['grunt.js', 'src/**/*.js', 'test/**/*.js'],
+      Builder: 'src/.js'
     },
 
     // Watch utility
     watch: {
-      files: ['<config:lint.main>', '<config:lint.plugins>', '<config:qunit.files>'],
+      files: ['<config:lint.files>', '<config:qunit.files>'],
       tasks: 'default'
     },
 
     // Testing config
     jshint: {
-      main: {
+      files: {
+        globals: {
+          '$': true,
+          'jQuery': true,
+          'require': true,
+          'define': true,
+
+          // Builder functions
+          'Builder': true,
+          'before': true,
+          'after': true,
+          'settings': true
+        }
+      },
+      Builder: {
         options: {
           curly: true,
           eqeqeq: true,
@@ -114,20 +128,6 @@ module.exports = function(grunt) {
           'define': true,
 
           // Settings are defined in external files
-          'settings': true
-        }
-      },
-      plugins: {
-        globals: {
-          '$': true,
-          'jQuery': true,
-          'require': true,
-          'define': true,
-
-          // Builder functions
-          'Builder': true,
-          'before': true,
-          'after': true,
           'settings': true
         }
       }

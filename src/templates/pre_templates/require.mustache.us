@@ -6,4 +6,6 @@ define(['jquery'], function ($) {
 
 <%= content %>
 
+return Builder;
+
 });

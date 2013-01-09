@@ -157,6 +157,6 @@ Builder.after = after;
 
 
 
-return Builder;
+window.Builder = Builder;
 
 }());

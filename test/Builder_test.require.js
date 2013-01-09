@@ -20,26 +20,25 @@
     raises(block, [expected], [message])
 */
 
-module('jQuery#awesome', {
+module('Builder#requirejs', {
   // This will run before each test in this module.
   setup: function() {
     this.selector = '#qunit-fixture';
   }
 });
 
-test('is chainable', function() {
+test('exists', function() {
   expect(1);
 
   // Stop the test while we load jQuery.
   stop();
 
   // Load jQuery.
-  require(['jquery', 'Builder'], function ($) {
+  require(['Builder'], function (Builder) {
     // Continue testing.
     start();
 
-    // Not a bad test to run on collection methods.
-    var elems = $(this.selector).children();
-    strictEqual(elems.awesome(), elems, 'should be chainable');
+    // Assert Builder exists
+    ok(Builder, 'Builder as defined by requirejs exists');
   });
 });

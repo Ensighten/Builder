@@ -23,14 +23,15 @@
   ],
   "main": "src/Builder.js",
   "scripts": {
-    "test": "grunt qunit"
+    "test": "grunt test"
   },
   "dependencies": {},
   "devDependencies": {
     "grunt": "~0.3.17",
     "grunt-templater": "0.0.3-1",
     "mustache": "~0.7.0",
-    "underscore": "~1.4.3"
+    "underscore": "~1.4.3",
+    "grunt-mocha": "~0.1.7"
   },
   "keywords": [
     "render",

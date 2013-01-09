@@ -76,7 +76,7 @@ module.exports = function(grunt) {
     },
 
     // Testing setup
-    qunit: {
+    mocha: {
       files: ['test/**/*.html']
     },
     lint: {
@@ -143,8 +143,11 @@ module.exports = function(grunt) {
   // Load in grunt-templater
   grunt.loadNpmTasks('grunt-templater');
 
-  // Alias test as qunit
-  grunt.registerTask('test', 'qunit');
+  // Load in grunt-mocha
+  grunt.loadNpmTasks('grunt-mocha');
+
+  // Alias mocha as test
+  grunt.registerTask('test', 'mocha');
 
   // Default task.
   grunt.registerTask('default', 'lint template concat min test');

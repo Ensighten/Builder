@@ -1,4 +1,33 @@
-(function ($, undefined) {
+{{^useJQuery}}
+define(function () {
+{{/useJQuery}}
+{{#useJQuery}}
+(function ($) {
+{{/useJQuery}}
+
+{{^useJQuery}}
+{{{defaultSettings}}}
+{{/useJQuery}}
+
+{{#useJQuery}}
+{{{jQuerySettings}}}
+{{/useJQuery}}
+
 {{{Builder}}}
+
+{{#useJQuery}}
+{{{BuilderJQuery}}}
+{{/useJQuery}}
+
+{{#useKeys}}
+{{{BuilderKeys}}}
+{{/useKeys}}
+
 return Builder;
-}(jQuery));
+
+{{^useJQuery}}
+)());
+{{/useJQuery}}
+{{#useJQuery}}
+)(jQuery));
+{{/useJQuery}}

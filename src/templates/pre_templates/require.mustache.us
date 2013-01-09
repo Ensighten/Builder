@@ -1,0 +1,7 @@
+{{^useJQuery}}
+define(function () {
+{{#useJQuery}}
+define(['jquery'], function ($) {
+{{/useJQuery}}
+<%= content %>
+});

@@ -1,14 +1,17 @@
 define(function () {
-// Default settings for Builder
+// jQuery flavored settings for Builder
 var settings = {
       'template engine': function (tmpl) {
         return tmpl;
       },
       'dom engine': function (content) {
-        return content;
+        return $(content);
       }
-    },
-    beforeFns = [],
+    };
+
+
+// Create storage for before and after functions
+var beforeFns = [],
     afterFns = [];
 
 /**

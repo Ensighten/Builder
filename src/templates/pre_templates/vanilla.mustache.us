@@ -1,0 +1,15 @@
+{{^useJQuery}}
+define(function () {
+{{/useJQuery}}
+{{#useJQuery}}
+(function ($) {
+{{/useJQuery}}
+
+<%= content %>
+
+{{^useJQuery}}
+)());
+{{/useJQuery}}
+{{#useJQuery}}
+)(jQuery));
+{{/useJQuery}}

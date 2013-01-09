@@ -8,7 +8,9 @@ module.exports = function(grunt) {
   var vars = {
     'Builder': read('src/Builder.js'),
     'BuilderJQuery': read('src/Builder.jquery.js'),
-    'BuilderKeys': read('src/Builder.keys.js')
+    'BuilderKeys': read('src/Builder.keys.js'),
+    'defaultSettings': read('src/Builder.settings.jquery.js'),
+    'jQuerySettings': read('src/Builder.settings.jquery.js')
   },
   initConfig = {
     // Package data
@@ -47,6 +49,25 @@ module.exports = function(grunt) {
     // concat: distro.concat(initConfig.distro),
     // min: distro.min(initConfig.distro),
 
+    // Generating mustache templates from underscore templates
+    template: {
+      vanillaMustache: {
+        src: 'src/templates/pre_templates/vanilla.mustache.us',
+        dest: 'src/templates/vanilla.mustache',
+        engine: 'underscore',
+        variables: {
+          content: read('src/templates/pre_templates/content.mustache')
+        }
+      },
+      requireMustache: {
+        src: 'src/templates/pre_templates/require.mustache.us',
+        dest: 'src/templates/require.mustache',
+        variables: {
+          content: read('src/templates/pre_templates/content.mustache')
+        }
+      }
+    },
+
     // Testing setup
     qunit: {
       files: ['test/**/*.html']
@@ -83,7 +104,10 @@ module.exports = function(grunt) {
           '$': true,
           'jQuery': true,
           'require': true,
-          'define': true
+          'define': true,
+
+          // Settings are defined in external files
+          'settings': true
         }
       },
       plugins: {
@@ -103,7 +127,8 @@ module.exports = function(grunt) {
     },
     uglify: {}
   };
-  initConfig.template = distro.template(initConfig.distro);
+  // initConfig.template = distro.template(initConfig.distro);
+  _.extend(initConfig.template, distro.template(initConfig.distro));
   initConfig.concat = distro.concat(initConfig.distro);
   initConfig.min = distro.min(initConfig.distro);
   grunt.initConfig(initConfig);
@@ -116,6 +141,9 @@ module.exports = function(grunt) {
 
   // Default task.
   grunt.registerTask('default', 'lint template concat min test');
+
+  // Register task to generate mustache templates
+  grunt.registerTask('template-mustache', 'template:vanillaMustache template:requireMustache');
 
   // Register distro as a placeholder task (not really though)
   grunt.registerTask('distro', '');

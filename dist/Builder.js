@@ -2,17 +2,9 @@
 * https://github.com/Ensighten/Builder
 * Copyright (c) 2013 Ensighten; Licensed MIT */
 
-(function ($, undefined) {
-// Default settings for Builder
-var settings = {
-      'template engine': function (tmpl) {
-        return tmpl;
-      },
-      'dom engine': function (content) {
-        return content;
-      }
-    },
-    beforeFns = [],
+(function () {
+// Create storage for before and after functions
+var beforeFns = [],
     afterFns = [];
 
 /**
@@ -156,4 +148,4 @@ Builder.after = after;
 
 // TODO: Inside of README, leave notes about this.data
 return Builder;
-}(jQuery));
+}());

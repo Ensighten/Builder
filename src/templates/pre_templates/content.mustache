@@ -1,9 +1,4 @@
 {{^useJQuery}}
-define(function () {
-{{#useJQuery}}
-define(['jquery'], function ($) {
-{{/useJQuery}}
-{{^useJQuery}}
 {{{defaultSettings}}}
 {{/useJQuery}}
 
@@ -22,4 +17,3 @@ define(['jquery'], function ($) {
 {{/useKeys}}
 
 return Builder;
-});

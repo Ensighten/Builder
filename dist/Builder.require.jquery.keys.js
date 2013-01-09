@@ -3,16 +3,19 @@
 * Copyright (c) 2013 Ensighten; Licensed MIT */
 
 define(function () {
-// Default settings for Builder
+
+// jQuery flavored settings for Builder
 var settings = {
       'template engine': function (tmpl) {
         return tmpl;
       },
       'dom engine': function (content) {
-        return content;
+        return $(content);
       }
-    },
-    beforeFns = [],
+    };
+
+// Create storage for before and after functions
+var beforeFns = [],
     afterFns = [];
 
 /**
@@ -158,6 +161,7 @@ Builder.after = after;
 
 // Define jQuery as our dom engine
 // TODO: Inspect if uglify collapses this. If not, contemplate templating...
+// TODO: It does not, figure out how to easily do this
 settings['dom engine'] = $;
 
 /**

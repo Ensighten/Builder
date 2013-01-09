@@ -25,7 +25,6 @@
   }
 }, {
 // Builder.keys
-  // TODO
   "A template": {
     "rendered by a keys Builder": {
       "returns the view": true

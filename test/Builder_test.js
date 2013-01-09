@@ -1,7 +1,7 @@
 /*global QUnit:false, module:false, test:false, asyncTest:false, expect:false*/
 /*global start:false, stop:false ok:false, equal:false, notEqual:false, deepEqual:false*/
 /*global notDeepEqual:false, strictEqual:false, notStrictEqual:false, raises:false*/
-(function($) {
+(function() {
   /*
     ======== A Handy Little QUnit Reference ========
     http://docs.jquery.com/QUnit
@@ -21,12 +21,7 @@
       raises(block, [expected], [message])
   */
 
-  module('Builder#window', {
-    // This will run before each test in this module.
-    setup: function() {
-      this.elems = $('#qunit-fixture').children();
-    }
-  });
+  module('Builder#window');
 
   test('exists', function() {
     expect(1);
@@ -66,4 +61,4 @@
     strictEqual(output, '<div><span>hello</span></div>');
   });
 
-}(jQuery));
+}());

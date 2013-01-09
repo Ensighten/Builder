@@ -20,12 +20,7 @@
     raises(block, [expected], [message])
 */
 
-module('Builder#requirejs', {
-  // This will run before each test in this module.
-  setup: function() {
-    this.selector = '#qunit-fixture';
-  }
-});
+module('Builder#requirejs');
 
 test('exists', function() {
   expect(1);

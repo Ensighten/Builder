@@ -8,6 +8,8 @@
   <!-- Load local mocha. -->
   <link rel="stylesheet" href="../libs/mocha/mocha.css" media="screen">
   <script src="../libs/mocha/mocha.js"></script>
+  <!-- Load local grunt-mocha. -->
+  <script src="../libs/grunt-mocha/mocha-helper.js"></script>
   <!-- Load local chai. -->
   <script src="../libs/chai/chai.js"></script>
   <!-- Load local lib and tests. -->
@@ -17,6 +19,10 @@
        you REALLY want to mess around with jQuery in the console. REMEMBER WE
        ARE TESTING A PLUGIN HERE, THIS HELPS ENSURE BEST PRACTICES. REALLY. -->
   <script>window._$ = jQuery.noConflict(true);</script>
+  <!-- Run mocha. -->
+  <script>
+    mocha.run();
+  </script>
 </head>
 <body>
 <div id="mocha"></div>

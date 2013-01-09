@@ -39,24 +39,53 @@ function stageName(config) {
   return config.dest.replace('dist', 'stage');
 }
 
-module.exports = {
-  template: function (config) {
+// Helper for multiplexing functions
+function multiplex(fn) {
+  return function multiplexedFn (config) {
+    // Create a return object
+    var retObj = {};
+
+    // Iterate over the keys of the config
+    Object.getOwnPropertyNames(config).forEach(function (key) {
+      // Process and save the value through our fn to our retObj
+      var val = config[key];
+      retObj[key] = fn(val);
+    });
+
+    // Return the retObj
+    return retObj;
+  };
+}
+
+// Create single config item handlers
+function templateSingle (config) {
     // Extend and return the object
     return extend({
       dest: stageName(config)
     }, config);
-  },
-  concat: function (config) {
-    // Extend and return the object
-    return extend({
-      src: ['<banner:meta.banner>', '<file_strip_banner:' + stageName(config) + '>']
-    }, config);
-  },
-  min: function (config) {
-    // Extend and return the object
-    return extend({
-      src: ['<banner:meta.banner>', '<file_strip_banner:' + stageName(config) + '>'],
-      dest: config.dest.replace('.js', '.min.js')
-    }, config);
-  }
+}
+function concatSingle (config) {
+  // Extend and return the object
+  return extend({
+    src: ['<banner:meta.banner>', '<file_strip_banner:' + stageName(config) + '>']
+  }, config);
+}
+function minSingle (config) {
+  // Extend and return the object
+  return extend({
+    src: ['<banner:meta.banner>', '<file_strip_banner:' + stageName(config) + '>'],
+    dest: config.dest.replace('.js', '.min.js')
+  }, config);
+}
+
+module.exports = {
+  // Expose our single methods
+  templateSingle: templateSingle,
+  concatSingle: concatSingle,
+  minSingle: minSingle,
+
+  // Multiplex our single methods
+  template: multiplex(templateSingle),
+  concat: multiplex(concatSingle),
+  min: multiplex(minSingle)
 };

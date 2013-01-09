@@ -32,10 +32,11 @@
 //   }
 // }
 
-var extend = require('node.extend');
+var _ = require('underscore');
 
 // Helper for grabbing the stageName of a config
 function stageName(config) {
+console.log(config.dest.replace('dist', 'stage'));
   return config.dest.replace('dist', 'stage');
 }
 
@@ -60,19 +61,19 @@ function multiplex(fn) {
 // Create single config item handlers
 function templateSingle (config) {
     // Extend and return the object
-    return extend({
+    return _.defaults({
       dest: stageName(config)
     }, config);
 }
 function concatSingle (config) {
   // Extend and return the object
-  return extend({
+  return _.defaults({
     src: ['<banner:meta.banner>', '<file_strip_banner:' + stageName(config) + '>']
   }, config);
 }
 function minSingle (config) {
   // Extend and return the object
-  return extend({
+  return _.defaults({
     src: ['<banner:meta.banner>', '<file_strip_banner:' + stageName(config) + '>'],
     dest: config.dest.replace('.js', '.min.js')
   }, config);

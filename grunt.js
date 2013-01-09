@@ -43,36 +43,53 @@ module.exports = function(grunt) {
       files: ['test/**/*.html']
     },
     lint: {
-      files: ['grunt.js', 'src/**/*.js', 'test/**/*.js']
+      main: ['grunt.js', 'src/Builder.js', 'test/**/*.js'],
+      plugins: 'src/**/*.js'
     },
 
     // Watch utility
     watch: {
-      files: ['<config:lint.files>', '<config:qunit.files>'],
+      files: ['<config:lint.main>', '<config:lint.plugins>', '<config:qunit.files>'],
       tasks: 'default'
     },
 
     // Testing config
     jshint: {
-      options: {
-        curly: true,
-        eqeqeq: true,
-        immed: true,
-        latedef: true,
-        // newcap: true,
-        noarg: true,
-        sub: true,
-        undef: true,
-        boss: true,
-        eqnull: true,
+      main: {
+        options: {
+          curly: true,
+          eqeqeq: true,
+          immed: true,
+          // latedef: true,
+          // newcap: true,
+          noarg: true,
+          sub: true,
+          undef: true,
+          boss: true,
+          eqnull: true,
 
-        browser: true
+          browser: true
+        },
+        globals: {
+          '$': true,
+          'jQuery': true,
+          'require': true,
+          'define': true
+        }
       },
-      globals: {
-        '$': true,
-        'jQuery': true,
-        'require': true,
-        'define': true
+      plugins: {
+        globals: {
+          '$': true,
+          'jQuery': true,
+          'require': true,
+          'define': true,
+
+          // Builder functions
+          'Builder': true,
+          'before': true,
+          'after': true,
+          'settings': true
+        }
       }
     },
     uglify: {}

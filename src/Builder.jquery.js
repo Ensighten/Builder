@@ -1,8 +1,8 @@
 /**
- * Helper for binding jQuery plugins after rendering
- * @param {String|Object} params If a string, params={'plugin': params, 'selector': '.' + params}
+ * Initialize jQuery plugins after rendering
+ * @param {String|Object} params If a string, it will be used for params.plugin and we will search elements which use it as a class
  * @param {String} params.plugin jQuery plugin to instantiate
- * @param {Mixed} [params.selector='.' + params.plugin] Selector to use within $content.filter and $content.find
+ * @param {Mixed} params.selector Selector to use within $content.filter and $content.find
  */
 function addPlugin(params) {
   // If the params are a string, upcast it to an object

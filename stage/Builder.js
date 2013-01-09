@@ -153,8 +153,6 @@ function after(fn) {
 }
 Builder.after = after;
 
-// TODO: Inside of README, leave notes about this.data
-
 
 
 window.Builder = Builder;

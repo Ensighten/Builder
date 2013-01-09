@@ -157,8 +157,6 @@ function after(fn) {
 }
 Builder.after = after;
 
-// TODO: Inside of README, leave notes about this.data
-
 
 // Create store for key-value pairs of views
 var views = {};

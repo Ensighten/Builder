@@ -35,6 +35,13 @@ module.exports = function(grunt) {
         dest: 'dist/Builder.require.js',
         variables: vars
       },
+      'require-jquery': {
+        src: 'src/templates/require.mustache',
+        dest: 'dist/Builder.require.jquery.js',
+        variables: _.defaults({
+          useJQuery: true
+        }, vars)
+      },
       'require-jquery-keys': {
         src: 'src/templates/require.mustache',
         dest: 'dist/Builder.require.jquery.keys.js',

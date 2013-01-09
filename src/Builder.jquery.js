@@ -1,8 +1,3 @@
-// Define jQuery as our dom engine
-// TODO: Inspect if uglify collapses this. If not, contemplate templating...
-// TODO: It does not, figure out how to easily do this
-settings['dom engine'] = $;
-
 /**
  * Helper for binding jQuery plugins after rendering
  * @param {String|Object} params If a string, params={'plugin': params, 'selector': '.' + params}

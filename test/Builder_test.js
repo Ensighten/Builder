@@ -30,8 +30,21 @@
 
   test('exists', function() {
     expect(1);
-    // Not a bad test to run on collection methods.
     ok(Builder, 'Builder defined on window exists');
+  });
+
+  module('Builder#template');
+
+  test('processed by an augmented vanilla Builder returns augments content', function () {
+    expect(1);
+    Builder.set('dom engine', function (content) {
+      return '<div>' + content + '</div>';
+    });
+
+    var input = '<span>hello</span>',
+        output = Builder(input);
+
+    strictEqual(output, '<div><span>hello</span></div>')
   });
 
 }(jQuery));

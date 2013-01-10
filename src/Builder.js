@@ -10,7 +10,7 @@ var beforeFns = [],
  */
 function Builder(tmpl, data) {
   // Generate a this context for data
-  var that = {'data': data};
+  var that = {'tmpl': tmpl, 'data': data};
 
   // Run the beforeFns on tmpl
   tmpl = pre.call(that, tmpl);

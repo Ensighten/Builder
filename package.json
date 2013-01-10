@@ -1,5 +1,5 @@
 {
-  "name": "Builder",
+  "name": "builder",
   "description": "Build chain for client-side MVC views. Render, convert to DOM elements, and bind jQuery plugins in one fell swoop.",
   "version": "0.1.0",
   "homepage": "https://github.com/Ensighten/Builder",

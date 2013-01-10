@@ -1,0 +1,218 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@1.1.41
+3 info using node@v0.8.8
+4 verbose config file /home/todd/.npmrc
+5 verbose config file /usr/local/etc/npmrc
+6 verbose config file /usr/local/lib/node_modules/npm/npmrc
+7 verbose publish [ '.' ]
+8 verbose read json /home/todd/github/Builder/package.json
+9 verbose cache add [ '.', null ]
+10 silly cache add name=undefined spec="." args=[".",null]
+11 verbose parsed url { pathname: '.', path: '.', href: '.' }
+12 silly lockFile 3a52ce78- .
+13 verbose lock . /home/todd/.npm/3a52ce78-.lock
+14 verbose read json package.json
+15 verbose tar pack [ '/home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/tmp.tgz',
+15 verbose tar pack   '.' ]
+16 verbose tarball /home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/tmp.tgz
+17 verbose folder .
+18 info prepublish Builder@0.1.0
+19 silly lockFile 0063f18f-3847-0-07674190867692232-tmp-tgz /home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/tmp.tgz
+20 verbose lock /home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/tmp.tgz /home/todd/.npm/0063f18f-3847-0-07674190867692232-tmp-tgz.lock
+21 silly lockFile 0063f18f-3847-0-07674190867692232-tmp-tgz /home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/tmp.tgz
+22 verbose tar unpack /home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/tmp.tgz
+23 silly lockFile 6fd482eb-3847-0-07674190867692232-package /home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/package
+24 verbose lock /home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/package /home/todd/.npm/6fd482eb-3847-0-07674190867692232-package.lock
+25 silly gunzTarPerm modes [ '755', '644' ]
+26 silly gunzTarPerm extractEntry package.json
+27 silly gunzTarPerm extractEntry .npmignore
+28 silly gunzTarPerm extractEntry README.md
+29 silly gunzTarPerm extractEntry grunt.js
+30 silly gunzTarPerm extractEntry dist/Builder.require.jquery.min.js
+31 silly gunzTarPerm extractEntry dist/Builder.jquery.js
+32 silly gunzTarPerm extractEntry dist/Builder.require.jquery.keys.js
+33 silly gunzTarPerm extractEntry dist/Builder.require.jquery.keys.min.js
+34 silly gunzTarPerm extractEntry dist/Builder.keys.js
+35 silly gunzTarPerm extractEntry dist/Builder.require.js
+36 silly gunzTarPerm extractEntry dist/Builder.require.jquery.js
+37 silly gunzTarPerm extractEntry dist/Builder.jquery.min.js
+38 silly gunzTarPerm extractEntry dist/Builder.require.min.js
+39 silly gunzTarPerm extractEntry dist/Builder.min.js
+40 silly gunzTarPerm extractEntry dist/Builder.js
+41 silly gunzTarPerm extractEntry dist/Builder.keys.min.js
+42 silly gunzTarPerm extractEntry stage/Builder.require.js
+43 silly gunzTarPerm extractEntry stage/Builder.jquery.js
+44 silly gunzTarPerm extractEntry stage/Builder.require.jquery.keys.js
+45 silly gunzTarPerm extractEntry stage/Builder.keys.js
+46 silly gunzTarPerm extractEntry stage/Builder.require.jquery.js
+47 silly gunzTarPerm extractEntry stage/Builder.js
+48 silly gunzTarPerm extractEntry src/Builder.settings.jquery.js
+49 silly gunzTarPerm extractEntry src/Builder.jquery.js
+50 silly gunzTarPerm extractEntry src/Builder.keys.js
+51 silly gunzTarPerm extractEntry src/Builder.settings.default.js
+52 silly gunzTarPerm extractEntry src/Builder.js
+53 silly gunzTarPerm extractEntry src/templates/pre_templates/require.mustache.us
+54 silly gunzTarPerm extractEntry src/templates/pre_templates/vanilla.mustache.us
+55 silly gunzTarPerm extractEntry src/templates/pre_templates/content.mustache
+56 silly gunzTarPerm extractEntry src/templates/vanilla.mustache
+57 silly gunzTarPerm extractEntry src/templates/require.mustache
+58 silly gunzTarPerm extractEntry LICENSE-MIT
+59 silly gunzTarPerm extractEntry test/Builder_test.js
+60 silly gunzTarPerm extractEntry test/Builder_test.require.js
+61 silly gunzTarPerm extractEntry test/Builder.skeleton.js
+62 silly gunzTarPerm extractEntry test/Builder_test.require.jquery.js
+63 silly gunzTarPerm extractEntry test/Builder_test.keys.js
+64 silly gunzTarPerm extractEntry test/Builder_test.jquery.js
+65 silly gunzTarPerm extractEntry test/Builder.jquery.html
+66 silly gunzTarPerm extractEntry test/Builder.html
+67 silly gunzTarPerm extractEntry test/Builder.keys.html
+68 silly gunzTarPerm extractEntry test/Builder.require.html
+69 silly gunzTarPerm extractEntry test/Builder.require.jquery.html
+70 silly gunzTarPerm extractEntry utils/distro.js
+71 silly gunzTarPerm extractEntry libs/jquery-loader.js
+72 silly gunzTarPerm extractEntry libs/qunit/qunit.js
+73 silly gunzTarPerm extractEntry libs/qunit/qunit.css
+74 silly gunzTarPerm extractEntry libs/jquery/jquery.js
+75 silly gunzTarPerm extractEntry libs/requirejs/require.js
+76 verbose read json /home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/package/package.json
+77 silly lockFile 6fd482eb-3847-0-07674190867692232-package /home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/package
+78 verbose from cache /home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/package/package.json
+79 verbose tar pack [ '/home/todd/.npm/Builder/0.1.0/package.tgz',
+79 verbose tar pack   '/home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/package' ]
+80 verbose tarball /home/todd/.npm/Builder/0.1.0/package.tgz
+81 verbose folder /home/todd/tmp/npm-17637/1357791493847-0.07674190867692232/package
+82 silly lockFile 660a8dab-dd-npm-Builder-0-1-0-package-tgz /home/todd/.npm/Builder/0.1.0/package.tgz
+83 verbose lock /home/todd/.npm/Builder/0.1.0/package.tgz /home/todd/.npm/660a8dab-dd-npm-Builder-0-1-0-package-tgz.lock
+84 silly lockFile 660a8dab-dd-npm-Builder-0-1-0-package-tgz /home/todd/.npm/Builder/0.1.0/package.tgz
+85 silly lockFile e10b7ac9-e-todd-npm-Builder-0-1-0-package /home/todd/.npm/Builder/0.1.0/package
+86 verbose lock /home/todd/.npm/Builder/0.1.0/package /home/todd/.npm/e10b7ac9-e-todd-npm-Builder-0-1-0-package.lock
+87 silly lockFile e10b7ac9-e-todd-npm-Builder-0-1-0-package /home/todd/.npm/Builder/0.1.0/package
+88 verbose tar unpack /home/todd/.npm/Builder/0.1.0/package.tgz
+89 silly lockFile e10b7ac9-e-todd-npm-Builder-0-1-0-package /home/todd/.npm/Builder/0.1.0/package
+90 verbose lock /home/todd/.npm/Builder/0.1.0/package /home/todd/.npm/e10b7ac9-e-todd-npm-Builder-0-1-0-package.lock
+91 silly gunzTarPerm modes [ '755', '644' ]
+92 silly gunzTarPerm extractEntry package.json
+93 silly gunzTarPerm extractEntry .npmignore
+94 silly gunzTarPerm extractEntry README.md
+95 silly gunzTarPerm extractEntry grunt.js
+96 silly gunzTarPerm extractEntry dist/Builder.require.jquery.min.js
+97 silly gunzTarPerm extractEntry dist/Builder.jquery.js
+98 silly gunzTarPerm extractEntry dist/Builder.require.jquery.keys.js
+99 silly gunzTarPerm extractEntry dist/Builder.require.jquery.keys.min.js
+100 silly gunzTarPerm extractEntry dist/Builder.keys.js
+101 silly gunzTarPerm extractEntry dist/Builder.require.js
+102 silly gunzTarPerm extractEntry dist/Builder.require.jquery.js
+103 silly gunzTarPerm extractEntry dist/Builder.jquery.min.js
+104 silly gunzTarPerm extractEntry dist/Builder.require.min.js
+105 silly gunzTarPerm extractEntry dist/Builder.min.js
+106 silly gunzTarPerm extractEntry dist/Builder.js
+107 silly gunzTarPerm extractEntry dist/Builder.keys.min.js
+108 silly gunzTarPerm extractEntry stage/Builder.require.js
+109 silly gunzTarPerm extractEntry stage/Builder.jquery.js
+110 silly gunzTarPerm extractEntry stage/Builder.require.jquery.keys.js
+111 silly gunzTarPerm extractEntry stage/Builder.keys.js
+112 silly gunzTarPerm extractEntry stage/Builder.require.jquery.js
+113 silly gunzTarPerm extractEntry stage/Builder.js
+114 silly gunzTarPerm extractEntry src/Builder.settings.jquery.js
+115 silly gunzTarPerm extractEntry src/Builder.jquery.js
+116 silly gunzTarPerm extractEntry src/Builder.keys.js
+117 silly gunzTarPerm extractEntry src/Builder.settings.default.js
+118 silly gunzTarPerm extractEntry src/Builder.js
+119 silly gunzTarPerm extractEntry src/templates/pre_templates/require.mustache.us
+120 silly gunzTarPerm extractEntry src/templates/pre_templates/vanilla.mustache.us
+121 silly gunzTarPerm extractEntry src/templates/pre_templates/content.mustache
+122 silly gunzTarPerm extractEntry src/templates/vanilla.mustache
+123 silly gunzTarPerm extractEntry src/templates/require.mustache
+124 silly gunzTarPerm extractEntry test/Builder_test.js
+125 silly gunzTarPerm extractEntry test/Builder_test.require.js
+126 silly gunzTarPerm extractEntry test/Builder.skeleton.js
+127 silly gunzTarPerm extractEntry test/Builder_test.require.jquery.js
+128 silly gunzTarPerm extractEntry test/Builder_test.keys.js
+129 silly gunzTarPerm extractEntry test/Builder_test.jquery.js
+130 silly gunzTarPerm extractEntry test/Builder.jquery.html
+131 silly gunzTarPerm extractEntry test/Builder.html
+132 silly gunzTarPerm extractEntry test/Builder.keys.html
+133 silly gunzTarPerm extractEntry test/Builder.require.html
+134 silly gunzTarPerm extractEntry test/Builder.require.jquery.html
+135 silly gunzTarPerm extractEntry utils/distro.js
+136 silly gunzTarPerm extractEntry LICENSE-MIT
+137 silly gunzTarPerm extractEntry libs/jquery-loader.js
+138 silly gunzTarPerm extractEntry libs/qunit/qunit.js
+139 silly gunzTarPerm extractEntry libs/qunit/qunit.css
+140 silly gunzTarPerm extractEntry libs/jquery/jquery.js
+141 silly gunzTarPerm extractEntry libs/requirejs/require.js
+142 verbose read json /home/todd/.npm/Builder/0.1.0/package/package.json
+143 silly lockFile e10b7ac9-e-todd-npm-Builder-0-1-0-package /home/todd/.npm/Builder/0.1.0/package
+144 silly shasum updated bytes 40960
+145 silly shasum updated bytes 40960
+146 silly shasum updated bytes 39786
+147 info shasum aa8e0a3c6e22fc0eb3061cae9f6719f8259a78c6
+147 info shasum /home/todd/.npm/Builder/0.1.0/package.tgz
+148 verbose from cache /home/todd/.npm/Builder/0.1.0/package/package.json
+149 verbose chmod /home/todd/.npm/Builder/0.1.0/package.tgz 644
+150 verbose chown /home/todd/.npm/Builder/0.1.0/package.tgz [ 1000, 1000 ]
+151 silly lockFile 3a52ce78- .
+152 silly publish { name: 'Builder',
+152 silly publish   description: 'Build chain for client-side MVC views. Render, convert to DOM elements, and bind jQuery plugins in one fell swoop.',
+152 silly publish   version: '0.1.0',
+152 silly publish   homepage: 'https://github.com/Ensighten/Builder',
+152 silly publish   author:
+152 silly publish    { name: 'Todd Wolfson',
+152 silly publish      email: 'todd@twolfson.com',
+152 silly publish      url: 'http://twolfson.com/' },
+152 silly publish   repository: { type: 'git', url: 'git://github.com/Ensighten/Builder.git' },
+152 silly publish   bugs: { url: 'https://github.com/Ensighten/Builder/issues' },
+152 silly publish   licenses:
+152 silly publish    [ { type: 'MIT',
+152 silly publish        url: 'https://github.com/Ensighten/Builder/blob/master/LICENSE-MIT' } ],
+152 silly publish   main: 'src/Builder.js',
+152 silly publish   scripts: { test: 'grunt qunit' },
+152 silly publish   dependencies: {},
+152 silly publish   devDependencies:
+152 silly publish    { grunt: '~0.3.17',
+152 silly publish      'grunt-templater': '0.0.3-1',
+152 silly publish      mustache: '~0.7.0',
+152 silly publish      underscore: '~1.4.3' },
+152 silly publish   keywords:
+152 silly publish    [ 'render',
+152 silly publish      'template',
+152 silly publish      'build',
+152 silly publish      'view',
+152 silly publish      'client-side',
+152 silly publish      'mvc',
+152 silly publish      'jquery',
+152 silly publish      'plugin',
+152 silly publish      'automate',
+152 silly publish      'builder' ],
+152 silly publish   readme: '# Builder\n\nBuild chain for client-side MVC views.\n\nRender, convert to DOM elements, and bind jQuery plugins in one fell swoop.\n\n## Getting Started\nDownload any of the versions below. A [definition of each preset](#presets) is presented later in the documentation.\n\n|             |        Vanilla        |  jQuery  |    keys    |    require    | require + jQuery | require + jQuery + keys |\n|-------------|-----------------------|----------|------------|---------------|------------------|-------------------------|\n| Development | [Builder.js][van_max] | [jQuery][jq_max] | [keys][keys_max] | [require][require_max] | [require + jQuery][require_jq_max] | [require + jQuery + keys][the_works_max]         |\n| Production  | [Builder.js][van_min] | [jQuery][jq_min] | [keys][keys_min] | [require][require_min] | [require + jQuery][require_jq_min] | [require + jQuery + keys][the_works_min]         |\n\n[van_max]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.js\n[van_min]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.min.js\n[jq_max]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.jquery.js\n[jq_min]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.jquery.min.js\n[keys_max]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.keys.js\n[keys_min]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.keys.min.js\n[require_max]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.require.js\n[require_min]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.require.min.js\n[require_jq_max]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.require.jquery.js\n[require_jq_min]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.require.jquery.min.js\n[the_works_max]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.require.jquery.keys.js\n[the_works_min]: https://raw.github.com/Ensighten/Builder/master/dist/Builder.require.jquery.keys.min.js\n\nIn your web page:\n\n```html\n<script src="jquery.js"></script>\n<script src="dist/Builder.min.js"></script>\n<script>\n// Demonstration of jQuery Builder\n\n// Specify Jade as our template engine\nBuilder.set(\'template engine\', jade.render);\n\n// Register a few plugins\nBuilder.addPlugin(\'datepicker\');\nBuilder.addPlugin(\'timepicker\');\n\n// Render our view via jQuery\nvar template = [\n      \'#main\',\n      \'  input.datepicker\',\n      \'  input.timepicker\'\n    ].join(\'\\n\'),\n    $content = Builder(template);\n\n// Content is a jQuery collection of #main\n$content; // [<div id="main">]\n\n// The children have also been rendered\n$content.find(\'.datepicker\'); // [<input class="datepicker">]\n\n// and datepicker has already bound to the DOM and is visually represented\n\n// the same goes for timepicker\n</script>\n```\n\n## Documentation\nBuilder is run as a standalone function that you can configure as you please.\n```js\nBuilder(tmpl, data);\n/**\n * Build chain for client side views. before -> template -> domify -> after -> return\n * @param {String} tmpl Template to process through template engine\n * @param {Object} [data] Data to pass through to template engine\n * @returns {Mixed} Output from before -> template -> domify -> after -> return\n */\n```\n\nAs mentioned in the documentation above, Builder runs through 4 steps.\n\nEach of these steps has access to the original data passed into Builder via `this`.\n\nThis is also where you can/should modify data in `before`.\n```js\nthis; // {\'tmpl\': tmpl, \'data\': data};\n```\n\n```js\nBuilder.before(fn);\n/**\n * Add a new method to run before template.\n * Before methods are run in the sequence the are added.\n * These are intended to modify template data.\n * @param {Function} fn Before method to add\n */\n\nBuilder.template(tmpl, data);\n/**\n * Parse template through its engine\n * @param {String} tmpl Template to process through template engine\n * @param {Object} [data] Data to pass through to template engine\n */\n\nBuilder.domify(content);\n/**\n * Convert HTML into HTMLElements, jQuery elements, or other\n * @param {String} content HTML to pass through dom engine\n */\n\nBuilder.after(fn);\n/**\n * Add a new method to run after domify.\n * After methods are run in the sequence the are added.\n * These are intended to modify $content.\n * @param {Function} fn After method to add\n */\n```\n\nLastly, we can update our `template engine` (e.g. [jade][jade], [ejs][ejs], [mustache][mustache]) and `dom engine` (e.g. [jQuery][jquery], [Mason.js][mason], [innerHTML][innerHTML]).\n\nThe `template engine` takes views and interprets the template along with data to output content.\n\n`template engine` recieves `(<template string>, <data object>)` as parameters and is expected to return a `string` synchronously.\n\nThe `dom engine` takes strings and converts them into HTML elements, jQuery collections, or similar.\n\n```js\nBuilder.set(name, val);\nBuilder.set(object);\n/**\n * Settings helper for Builder\n * @param {String|Object} name If object, interpret as key-value pairs of settings. If string, save val under settings key.\n * @param {Mixed} [val] Value to save under name\n */\n```\n\n[jade]: https://github.com/visionmedia/jade\n[ejs]: https://github.com/visionmedia/ejs\n[mustache]: https://github.com/janl/mustache.js\n[jquery]: http://jquery.com/\n[mason]: https://github.com/twolfson/Mason.js\n[innerHTML]: https://developer.mozilla.org/en-US/docs/DOM/element.innerHTML\n\n## Presets\n\n### Vanilla\nBuilder with no adjustments.\n\n### jQuery\nSets `dom engine` to jQuery and adds\n```js\nBuilder.addPlugin(plugin);\nBuilder.addPlugin({\'plugin\': plugin, \'selector\': selector});\n/**\n * Initialize jQuery plugins after rendering\n * @param {String|Object} params If a string, it will be used for params.plugin and we will search elements which use it as a class\n * @param {String} params.plugin jQuery plugin to instantiate\n * @param {Mixed} params.selector Selector to use within $content.filter and $content.find\n */\n```\n\n### keys\nAdds a `before` method which will look up templates by a name rather than accepting the template directly through Builder.\n\nAdditionally, we add an `addView` method which allows you to add new views to look up.\n```js\nBuilder.addView(name, tmpl);\n/**\n * Function to add new views\n * @param {String} name Name to save template under\n * @param {String} tmpl Template to save\n */\n```\n\n### require\nDefines `Builder` within `define` function of [require.js][requirejs]\n\n[requirejs]: http://requirejs.org/\n\n## Examples\n### jQuery\nSee [Getting Started](#getting-started).\n\n### keys\n```js\n// Register a view\nBuilder.addView(\'sample\', \'<div>Sample!!</div>\');\n\n// Render the view\nBuilder(\'sample\'); // <div>Sample!!</div>\n```\n\n### require\n```js\nrequire([\'Builder\'], function (Builder) {\n  // Render the $content\n  var $content = Builder(\'<div>some content</div>\');\n\n  // Do stuff with $content\n});\n```\n\n## Contributing\nIn lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](http://gruntjs.com/).\n\n_Also, please don\'t edit files in the "dist" or "stage" subdirectories as they are generated via grunt. You\'ll find source code in the "lib" subdirectory!_\n\n### PhantomJS\nWhile grunt can run the included unit tests via [PhantomJS](http://phantomjs.org/), this shouldn\'t be considered a substitute for the real thing. Please be sure to test the `test/*.html` unit test file(s) in _actual_ browsers.\n\nSee the [Why does grunt complain that PhantomJS isn\'t installed?](https://github.com/gruntjs/grunt/blob/master/docs/faq.md#why-does-grunt-complain-that-phantomjs-isnt-installed) guide in the [Grunt FAQ](https://github.com/gruntjs/grunt/blob/master/docs/faq.md) for help with installing or troubleshooting PhantomJS.\n\n## License\nCopyright (c) 2013 Ensighten\nLicensed under the MIT license.\n',
+152 silly publish   _id: 'Builder@0.1.0',
+152 silly publish   dist: { shasum: 'aa8e0a3c6e22fc0eb3061cae9f6719f8259a78c6' } }
+153 verbose url raw Builder
+154 verbose url resolving [ 'https://registry.npmjs.org/', './Builder' ]
+155 verbose url resolved https://registry.npmjs.org/Builder
+156 info retry registry request attempt 1 at 20:18:15
+157 http PUT https://registry.npmjs.org/Builder
+158 http 403 https://registry.npmjs.org/Builder
+159 error publish Failed PUT response 403
+160 error Error: forbidden New packages must have all-lowercase names: Builder
+160 error     at RegClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:238:14)
+160 error     at Request.init.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/main.js:120:22)
+160 error     at Request.EventEmitter.emit (events.js:91:17)
+160 error     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/main.js:555:16)
+160 error     at Request.EventEmitter.emit (events.js:88:17)
+160 error     at IncomingMessage.Request.start.self.req.self.httpModule.request.buffer (/usr/local/lib/node_modules/npm/node_modules/request/main.js:517:14)
+160 error     at IncomingMessage.EventEmitter.emit (events.js:115:20)
+160 error     at IncomingMessage._emitEnd (http.js:366:10)
+160 error     at HTTPParser.parserOnMessageComplete [as onMessageComplete] (http.js:149:23)
+160 error     at CleartextStream.socketOnData [as ondata] (http.js:1366:20)
+161 error If you need help, you may report this log at:
+161 error     <http://github.com/isaacs/npm/issues>
+161 error or email it to:
+161 error     <npm-@googlegroups.com>
+162 error System Linux 3.2.0-23-generic
+163 error command "/usr/local/bin/node" "/usr/local/bin/npm" "publish"
+164 error cwd /home/todd/github/Builder
+165 error node -v v0.8.8
+166 error npm -v 1.1.41
+167 verbose exit [ 1, true ]
